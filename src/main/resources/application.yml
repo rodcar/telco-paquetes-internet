@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      username: test
+      password: passwordvalue
+      uri: mongodb://localhost:27017/paquetes_internet
