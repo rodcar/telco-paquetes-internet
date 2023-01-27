@@ -40,7 +40,7 @@ public class PaqueteInternetController {
 	public ResponseEntity<Object> save(@Validated @RequestBody PaqueteInternetCreateRequest request) {
 		try {
 			PaqueteInternet paquete = PaqueteInternet.builder().nombre(request.getNombre())
-					.descripcion(request.getDescripcion()).precio(request.getPrecio()).build();
+					.descripcion(request.getDescripcion()).precio(request.getPrecio()).imagen(request.getImagen()).build();
 			PaqueteInternet nuevoPaquete = paqueteInternetService.save(paquete);
 			URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 					.buildAndExpand(nuevoPaquete.getId()).toUri();

@@ -6,5 +6,6 @@ import lombok.Data;
 public class PaqueteInternetCreateRequest {
 	private String nombre;
 	private String descripcion;
+	private String imagen;
 	private Double precio;
 }
